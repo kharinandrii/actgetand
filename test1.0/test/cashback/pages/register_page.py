@@ -1,14 +1,17 @@
 from .base_page import BasePage
 from .locators import RegisterPageLocators
+from .tools.dict_file import DictFile
 from faker import Faker
 import time
 import random
 class RegisterPage(BasePage):
 
     def fill_user_login(self):
+        dict_file = DictFile()
         login_field = self.browser.find_element(*RegisterPageLocators.USER_LOGIN_LOCATOR)
         fake = Faker()
         user_login = fake.word() + str(random.randint(1, 1000))
+        dict_file.d["nameUser"] = user_login
         login_field.send_keys(user_login)
 
     def fill_email_field(self):

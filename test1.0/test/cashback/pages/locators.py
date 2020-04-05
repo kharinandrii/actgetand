@@ -24,4 +24,12 @@ class MainPageLocators:
 
 class OfficePageLocators:
     ALERT_MESSAGE_LOCATOR = (By.XPATH, "//div[@class='alert alert-danger']")
+    ADMIN_PANEL_LINK_LOCATOR = (By.XPATH, "//a[text()='Админ-панель']")
+    LOGOUT_LINK_LOCATOR = (By.XPATH, "//a[text()='Выход']")
+    SUCCES_ALERT_LOCATOR = (By.XPATH, "//div[contains(@class,'alert-success')]/p")
 
+class AdminPanelLocators:
+    MAIL_PAGE_LINK_LOCATOR = (By.XPATH, "//a/span[text()='Письма']")
+    OPEN_MAIL_LINK_LOCATOR = (By.XPATH, "//a[@class='btn blue-steel tooltips'][1]")
+    CONFIRM_MAIL_LINK_LOCATOR = (By.LINK_TEXT, "Подтвердить")
+    LOGOUT_ADMIN_LOCATOR = (By.XPATH, "")
