@@ -22,3 +22,6 @@ class RegisterPageLocators():
     PASSWORD_CONFIRM = (By.XPATH, '//*[@id = "input-confirm"]')
     CHECKBOX = (By.XPATH, '//*[@name = "agree"]')
     CONTINUE_BUTTON = (By.XPATH, '//*[@type = "submit"]')
+
+class SuccessPageLocators():
+    SUCCESS_MESSAGE = (By.XPATH, '//h1')

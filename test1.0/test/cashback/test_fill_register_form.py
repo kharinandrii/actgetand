@@ -1,5 +1,6 @@
 from .pages.main_page import MainPageOpenCard
 from .pages.register_page import RegisterPage
+from .pages.success_page import SuccessPage
 from faker import Faker
 import time
 def test_main_page(browser):
@@ -11,6 +12,7 @@ def test_main_page(browser):
     phone = str(time.time()).replace('.', '')
     address = faker.address()
     main_page = MainPageOpenCard(browser, link)
+    success_page = SuccessPage(browser, link)
 
     browser.get(link)
 
@@ -30,8 +32,9 @@ def test_main_page(browser):
     register_page.choose_region("3494")
     register_page.fill_password('123456t')
     register_page.fill_password_confirm('123456t')
+    register_page.click_on_checkbox()
     register_page.click_on_continue_button()
-
+    success_page.check_success_message('Congratulations! Your new account has been successfully created!')
 
     time.sleep(20000)
 
