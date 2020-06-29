@@ -10,3 +10,7 @@ class SavePageLocators():
 
 class RegisterPageLocators():
     FIRST_NAME = (By.XPATH, '//*[@id = "input-firstname"]')
+    LAST_NAME = (By.XPATH, '//*[@id = "input-lastname"]')
+    EMAIL = (By.XPATH, '//*[@id = "input-email"]')
+    PHONE = (By.XPATH, '//*[@id = "input-telephone"]')
+    ADDRESS = (By.XPATH,'//*[@id = "input-address-1"]')

@@ -1,7 +1,7 @@
 from .base_page import BasePage
 from .locators import MainPageLocators
 from .locators import SavePageLocators
-import time
+
 class MainPageOpenCard(BasePage):
 
     def open_register_page(self):
