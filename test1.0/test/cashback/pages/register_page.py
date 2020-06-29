@@ -38,5 +38,24 @@ class RegisterPage(BasePage):
         country_select = Select(self.browser.find_element(*RegisterPageLocators.COUNTRY))
         country_select.select_by_value(value)
 
+    def choose_region(self, value):
+        region_select = Select(self.browser.find_element(*RegisterPageLocators.REGION))
+        region_select.select_by_value(value)
+
+    def fill_password(self, password):
+        password_field = self.browser.find_element(*RegisterPageLocators.PASSWORD)
+        password_field.send_keys(password)
+
+    def fill_password_confirm(self, password):
+        password_field = self.browser.find_element(*RegisterPageLocators.PASSWORD_CONFIRM)
+        password_field.send_keys(password)
+
+    def click_on_checkbox(self):
+        checkbox = self.browser.find_element(*RegisterPageLocators.CHECKBOX)
+        checkbox.click()
+
+    def click_on_continue_button(self):
+        continue_button = self.browser.find_element(*RegisterPageLocators.CONTINUE_BUTTON)
+        continue_button.click()
 
 

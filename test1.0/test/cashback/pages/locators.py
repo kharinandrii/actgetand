@@ -17,3 +17,8 @@ class RegisterPageLocators():
     CITY = (By.XPATH, '//*[@id  ="input-city"]')
     POSTCODE = (By.XPATH, '//*[@id  ="input-postcode"]')
     COUNTRY = (By.XPATH, '//*[@id = "input-country"]')
+    REGION = (By.XPATH, '//*[@id = "input-zone"]')
+    PASSWORD = (By.XPATH, '//*[@id = "input-password"]')
+    PASSWORD_CONFIRM = (By.XPATH, '//*[@id = "input-confirm"]')
+    CHECKBOX = (By.XPATH, '//*[@name = "agree"]')
+    CONTINUE_BUTTON = (By.XPATH, '//*[@type = "submit"]')

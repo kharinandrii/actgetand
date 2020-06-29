@@ -27,6 +27,11 @@ def test_main_page(browser):
     register_page.fill_city("Kherson")
     register_page.fill_postcode("73020")
     register_page.choose_country('220')
+    register_page.choose_region("3494")
+    register_page.fill_password('123456t')
+    register_page.fill_password_confirm('123456t')
+    register_page.click_on_continue_button()
+
 
     time.sleep(20000)
 
