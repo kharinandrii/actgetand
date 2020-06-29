@@ -14,3 +14,6 @@ class RegisterPageLocators():
     EMAIL = (By.XPATH, '//*[@id = "input-email"]')
     PHONE = (By.XPATH, '//*[@id = "input-telephone"]')
     ADDRESS = (By.XPATH,'//*[@id = "input-address-1"]')
+    CITY = (By.XPATH, '//*[@id  ="input-city"]')
+    POSTCODE = (By.XPATH, '//*[@id  ="input-postcode"]')
+    COUNTRY = (By.XPATH, '//*[@id = "input-country"]')

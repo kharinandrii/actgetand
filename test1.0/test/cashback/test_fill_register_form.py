@@ -8,8 +8,7 @@ def test_main_page(browser):
     name = faker.first_name()
     last_name = faker.last_name()
     mail = last_name + "@test.com"
-    # phone =faker.phone_number()
-    phone = str(time.localtime()).find('.')
+    phone = str(time.time()).replace('.', '')
     address = faker.address()
     main_page = MainPageOpenCard(browser, link)
 
@@ -25,6 +24,10 @@ def test_main_page(browser):
     register_page.fill_email(mail)
     register_page.fill_phone(phone)
     register_page.fill_address(address)
+    register_page.fill_city("Kherson")
+    register_page.fill_postcode("73020")
+    register_page.choose_country('220')
+
     time.sleep(20000)
 
 
