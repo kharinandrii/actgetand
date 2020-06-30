@@ -8,4 +8,7 @@ class SuccessPage(BasePage):
         actual_result = success_message.text
         print(actual_result)
         assert actual_result == expected_result
-        #Todo разобраться с преобразованием строк что б они были в одном регистре
+
+    def click_on_continue(self):
+        continue_button = self.browser.find_element(*SuccessPageLocators.CONTINUE_BUTTON)
+        continue_button.click()

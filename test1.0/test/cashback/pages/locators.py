@@ -25,3 +25,7 @@ class RegisterPageLocators():
 
 class SuccessPageLocators():
     SUCCESS_MESSAGE = (By.XPATH, '//h1')
+    CONTINUE_BUTTON = (By.XPATH, '//*[text() = "Continue"]')
+
+class AccountPageLocators():
+    EDIT_ACCOUNT = (By.XPATH, '//*[text() = "Edit your account information"]')

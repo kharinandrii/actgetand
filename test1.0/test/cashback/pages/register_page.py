@@ -1,14 +1,18 @@
 from .base_page import BasePage
 from .locators import RegisterPageLocators
-from .tools.dict_file import DictFile
-from faker import Faker
 from selenium.webdriver.support.ui import Select
-import time
-import random
+from .tools.dict_file import DictFile
+
 class RegisterPage(BasePage):
-    def fill_first_name(self, name):
+    dict_file = DictFile
+
+    def fill_first_name(self):
+        name = faker.first_name()
         first_name_field = self.browser.find_element(*RegisterPageLocators.FIRST_NAME)
         first_name_field.send_keys(name)
+
+
+
 
     def fill_last_name(self, last_name):
         last_name_field = self.browser.find_element(*RegisterPageLocators.LAST_NAME)
