@@ -29,3 +29,10 @@ class SuccessPageLocators():
 
 class AccountPageLocators():
     EDIT_ACCOUNT = (By.XPATH, '//*[text() = "Edit your account information"]')
+
+class ProfileLocators():
+    NAME_LOCATOR = (By.XPATH, '//*[@id = "input-firstname"]')
+    LASTNAME_LOCATOR = (By.XPATH, '//*[@id = "input-lastname"]')
+    EMAIL_LOCATOR = (By.XPATH, '//*[@id = "input-email"]')
+    PHONE_LOCATOR = (By.XPATH, '//*[@id = "input-telephone"]')
+    CONTINUE_BUTTON = (By.XPATH, '//*[@type = "submit"]')

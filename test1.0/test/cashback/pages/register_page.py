@@ -2,31 +2,41 @@ from .base_page import BasePage
 from .locators import RegisterPageLocators
 from selenium.webdriver.support.ui import Select
 from .tools.dict_file import DictFile
+from faker import Faker
+import time
 
 class RegisterPage(BasePage):
-    dict_file = DictFile
+
 
     def fill_first_name(self):
-        name = faker.first_name()
+        name = Faker().first_name()
         first_name_field = self.browser.find_element(*RegisterPageLocators.FIRST_NAME)
         first_name_field.send_keys(name)
+        DictFile.register_form_dict["name"] = name
 
 
 
 
-    def fill_last_name(self, last_name):
+    def fill_last_name(self):
+        last_name = Faker().last_name()
         last_name_field = self.browser.find_element(*RegisterPageLocators.LAST_NAME)
         last_name_field.send_keys(last_name)
+        DictFile.register_form_dict["lastname"] = last_name
 
-    def fill_email(self, mail):
+    def fill_email(self):
+        mail = DictFile.register_form_dict["lastname"] + "@test.com"
         email_field = self.browser.find_element(*RegisterPageLocators.EMAIL)
         email_field.send_keys(mail)
+        DictFile.register_form_dict["email"] = mail
 
-    def fill_phone(self, phone):
+    def fill_phone(self):
+        phone = str(time.time()).replace('.', '')
         phone_field = self.browser.find_element(*RegisterPageLocators.PHONE)
         phone_field.send_keys(phone)
+        DictFile.register_form_dict["phone"] = phone
 
-    def fill_address(self, address):
+    def fill_address(self):
+        address = Faker().address()
         address_field = self.browser.find_element(*RegisterPageLocators.ADDRESS)
         address_field.send_keys(address)
 
